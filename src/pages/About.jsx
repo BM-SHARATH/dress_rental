@@ -4,7 +4,7 @@ import { Home as HomeIcon } from "@mui/icons-material";
 
 const AboutUs = () => {
   const goToHomePage = () => {
-    window.location.href = "index.php";
+    window.location.href = "/";
   };
   const goBack = () => {
     window.history.back();

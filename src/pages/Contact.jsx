@@ -12,7 +12,7 @@ import { Home as HomeIcon } from "@mui/icons-material";
 const ContactUs = () => {
   const goToHomePage = () => {
     // Replace 'index.php' with the URL of your home page
-    window.location.href = "index.php";
+    window.location.href = "/";
   };
 
   return (

@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
 import ContactUs from "./pages/Contact";
 import AboutUs from "./pages/About";
+import AvailableDresses from "./pages/MDress";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/m-dress" element={<AvailableDresses />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
