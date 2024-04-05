@@ -1,10 +1,15 @@
-import { Button } from "@mui/material";
+import { BrowserRouter, RouterProvider, createBrowserRouter, } from "react-router-dom";
+import Login from "./pages/login";
 
+const routes = createBrowserRouter([{
+  path: "/",
+  element: <Login/>
+}])
 function App() {
   return (
-    <Button size="large" variant="contained">
-      Hello
-    </Button>
+    <BrowserRouter>
+      <RouterProvider routes={routes}/>
+    </BrowserRouter>
   );
 }
 
