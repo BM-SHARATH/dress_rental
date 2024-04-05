@@ -1,14 +1,13 @@
-import { BrowserRouter, RouterProvider, createBrowserRouter, } from "react-router-dom";
-import Login from "./pages/login";
+import { BrowserRouter,Route ,Routes} from "react-router-dom";
+import Login from "./pages/Login";
 
-const routes = createBrowserRouter([{
-  path: "/",
-  element: <Login/>
-}])
+
 function App() {
   return (
     <BrowserRouter>
-      <RouterProvider routes={routes}/>
+     <Routes>
+      <Route path="/" element={<Login />} />
+     </Routes>
     </BrowserRouter>
   );
 }
