@@ -1,15 +1,21 @@
-import { BrowserRouter, RouterProvider, createBrowserRouter, } from "react-router-dom";
-import Login from "./pages/login";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./theme";
+import ContactUs from "./pages/Contact";
+import AboutUs from "./pages/About";
 
-const routes = createBrowserRouter([{
-  path: "/",
-  element: <Login/>
-}])
 function App() {
   return (
-    <BrowserRouter>
-      <RouterProvider routes={routes}/>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
